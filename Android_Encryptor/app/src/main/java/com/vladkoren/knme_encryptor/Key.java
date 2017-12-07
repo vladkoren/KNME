@@ -53,7 +53,7 @@ public class Key {
         key.put(',', 39);
         key.put('.', 40);
         key.put('?', 41);
-        key.put('!', 41);
+        key.put('!', 42);
     }
 
     int getKey(char symbol){
