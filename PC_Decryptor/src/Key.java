@@ -46,6 +46,7 @@ public class Key {
 		key.put(40, '.');
 		key.put(41, '?');
 		key.put(42, '!');
+		key.put(43, '-');
 	}
 	char getValue(Integer inputKey) {
 		return key.get(inputKey);
