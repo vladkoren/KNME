@@ -55,6 +55,7 @@ public class Key {
         key.put('?', 41);
         key.put('!', 42);
         key.put('-', 43);
+        key.put('\'', 44);
     }
 
     int getKey(char symbol){
