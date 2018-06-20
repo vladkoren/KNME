@@ -45,7 +45,7 @@ public class Main {
 		key = new Key();
 		frmKnmeKrypt = new JFrame();
 		frmKnmeKrypt.setTitle("KNME Encryptor");
-		frmKnmeKrypt.setBounds(100, 100, 450, 300);
+		frmKnmeKrypt.setBounds(150, 150, 500, 400);
 		frmKnmeKrypt.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmKnmeKrypt.getContentPane().setLayout(null);
 		
@@ -71,7 +71,7 @@ public class Main {
 		resultTxtF = new JTextField();
 		resultTxtF.setToolTipText("Result");
 		resultTxtF.setEditable(false);
-		resultTxtF.setBounds(10, 200, 414, 20);
+		resultTxtF.setBounds(20, 300, 450, 40);
 		frmKnmeKrypt.getContentPane().add(resultTxtF);
 		resultTxtF.setColumns(10);
 	}
@@ -79,7 +79,8 @@ public class Main {
 	private String Encrypt(String text) {
 		String result = "";
 		char [] textArray = text.toCharArray();
-		for(int i = 0; i<textArray.length; i++) {
+		for(int i = (textArray.length - 1); i>=0; i--) {
+			System.out.println("Current symbol is : " + textArray[i]);
 			result = result + key.getKey(textArray[i]);
 		}
 		

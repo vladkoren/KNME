@@ -75,6 +75,7 @@ public class Main {
 	private String decrypt(String text) {
 		String temp = "";
 		String result = "";
+		String finalResult = "";
 		char[] symbols = new char[text.length()];
 		symbols = text.toCharArray();
 		for(int i = 0; i<text.length(); i++) {
@@ -104,7 +105,10 @@ public class Main {
 			}
 		}
 		result = result + key.getValue(Integer.parseInt(temp));
-		return result;
+		for(int i = (result.length() - 1); i>=0; i--) {
+			finalResult = finalResult + result.toCharArray()[i];
+		}
+		return finalResult;
 		
 	}
 }
